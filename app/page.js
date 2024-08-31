@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Box, Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 export default function Home() {
 
@@ -79,12 +79,23 @@ export default function Home() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      sx={{p:3, bgcolor:"#eaeaea"}}
     >
+      <Box>
+        <Typography variant="h4" fontWeight="bold" textAlign="center" color="#25424c">StarProfs</Typography>
+        <Typography
+          variant="h6"
+          fontWeight="bold"
+          sx={{textAlign:"center", fontSize: {xs: "1rem", sm: "1.25rem"},
+          mt: 1, flex: 1
+          }}
+        >Find Professors who make you love learning!</Typography>
+      </Box>
       <Stack 
         direction="column" 
         width="500px" 
         height="700px" 
-        border="1px solid black" 
+        border="2px solid green" 
         p={2} 
         spacing={3}
       >
@@ -96,8 +107,8 @@ export default function Home() {
             }
             >
               <Box 
-                bgcolor={message.role === 'assistant' ? "primary.main" : "secondary.main"}
-                color="white"
+                bgcolor={message.role === 'assistant' ? "#25424c" : "#e56e38"}
+                color="#ffffff"
                 borderRadius={16}
                 p={3}
               >
