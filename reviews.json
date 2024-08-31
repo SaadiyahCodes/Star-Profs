@@ -1,0 +1,126 @@
+{
+    "reviews": 
+    [
+      {
+        "professor": "Dr. Alice Smith",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Dr. Smith explains complex concepts clearly and is very approachable."
+      },
+      {
+        "professor": "Dr. Bob Johnson",
+        "subject": "Physics",
+        "stars": 5,
+        "review": "Dr. Johnson makes every lecture engaging with practical examples."
+      },
+      {
+        "professor": "Dr. Carol Davis",
+        "subject": "Chemistry",
+        "stars": 3,
+        "review": "Dr. Davis is knowledgeable but the lectures can be a bit dry."
+      },
+      {
+        "professor": "Dr. Daniel Martinez",
+        "subject": "Biology",
+        "stars": 4,
+        "review": "Dr. Martinez is passionate about the subject and provides helpful feedback."
+      },
+      {
+        "professor": "Dr. Emma Garcia",
+        "subject": "History",
+        "stars": 5,
+        "review": "Dr. Garcia brings history to life with captivating storytelling."
+      },
+      {
+        "professor": "Dr. Frank Wilson",
+        "subject": "Computer Science",
+        "stars": 4,
+        "review": "Dr. Wilson's practical assignments are very useful for real-world applications."
+      },
+      {
+        "professor": "Dr. Grace Lee",
+        "subject": "Economics",
+        "stars": 2,
+        "review": "Dr. Lee's lectures are hard to follow and often lack structure."
+      },
+      {
+        "professor": "Dr. Henry Brown",
+        "subject": "English",
+        "stars": 4,
+        "review": "Dr. Brown provides insightful analysis and encourages critical thinking."
+      },
+      {
+        "professor": "Dr. Ivy Wilson",
+        "subject": "Philosophy",
+        "stars": 3,
+        "review": "Dr. Wilson is knowledgeable but the course material can be quite challenging."
+      },
+      {
+        "professor": "Dr. Jack Anderson",
+        "subject": "Art History",
+        "stars": 5,
+        "review": "Dr. Anderson has a deep passion for the subject and offers engaging lectures."
+      },
+      {
+        "professor": "Dr. Karen Thomas",
+        "subject": "Sociology",
+        "stars": 4,
+        "review": "Dr. Thomas makes complex sociological theories accessible and interesting."
+      },
+      {
+        "professor": "Dr. Liam Walker",
+        "subject": "Engineering",
+        "stars": 5,
+        "review": "Dr. Walker's expertise and hands-on approach make engineering concepts clear."
+      },
+      {
+        "professor": "Dr. Mia White",
+        "subject": "Political Science",
+        "stars": 3,
+        "review": "Dr. White is knowledgeable but the class discussions can be unstructured."
+      },
+      {
+        "professor": "Dr. Noah Harris",
+        "subject": "Statistics",
+        "stars": 4,
+        "review": "Dr. Harris provides clear explanations and practical applications of statistical methods."
+      },
+      {
+        "professor": "Dr. Olivia Clark",
+        "subject": "Environmental Science",
+        "stars": 5,
+        "review": "Dr. Clark is passionate about the environment and makes the subject matter engaging."
+      },
+      {
+        "professor": "Dr. Paul Lewis",
+        "subject": "Geology",
+        "stars": 4,
+        "review": "Dr. Lewis offers detailed insights and fieldwork that enriches the learning experience."
+      },
+      {
+        "professor": "Dr. Quinn Young",
+        "subject": "Theater",
+        "stars": 3,
+        "review": "Dr. Young has a lot of experience but the classes can be inconsistent."
+      },
+      {
+        "professor": "Dr. Rachel King",
+        "subject": "Psychology",
+        "stars": 4,
+        "review": "Dr. King is engaging and provides valuable insights into human behavior."
+      },
+      {
+        "professor": "Dr. Steve Scott",
+        "subject": "Music",
+        "stars": 5,
+        "review": "Dr. Scott's passion for music is contagious, and his classes are very interactive."
+      },
+      {
+        "professor": "Dr. Tina Adams",
+        "subject": "Linguistics",
+        "stars": 3,
+        "review": "Dr. Adams is knowledgeable but the course content is sometimes overwhelming."
+      }
+    ]
+}
+  
