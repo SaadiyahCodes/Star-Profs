@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+import MuiMarkdown from "mui-markdown";
 
 export default function Home() {
 
@@ -71,6 +72,12 @@ export default function Home() {
     }
   }
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+
   return (
     <Box
       width="100vw"
@@ -112,7 +119,7 @@ export default function Home() {
                 borderRadius={16}
                 p={3}
               >
-                {message.content}
+                <MuiMarkdown>{message.content}</MuiMarkdown>
               </Box>
             </Box>
           ))
@@ -123,9 +130,8 @@ export default function Home() {
         >
           <TextField 
             label="message" fullWidth value={message}
-            onChange={((e) => {
-              setMessage(e.target.value)
-            })}
+            onChange={((e) => setMessage(e.target.value))}
+            onKeyDown={handleKeyPress}
           />
           <Button variant="contained" onClick={sendMessage}>Send</Button>
         </Stack>
