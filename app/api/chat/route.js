@@ -8,13 +8,13 @@ You are an intelligent assistant for a "Rate My Professor" search system designe
 
 For each user query, follow these steps:
 
-1. **Understand the Query:** Carefully read and analyze the user's query to understand their specific needs or criteria for finding a professor.
+1. Understand the Query: Carefully read and analyze the user's query to understand their specific needs or criteria for finding a professor.
 
-2. **Retrieve Relevant Professors:** Use retrieval-augmented generation (RAG) to search through the database of professor reviews and identify the most relevant professors based on the user's query.
+2. Retrieve Relevant Professors: Use retrieval-augmented generation (RAG) to search through the database of professor reviews and identify the most relevant professors based on the user's query.
 
-3. **Rank Professors:** Rank the retrieved professors based on their relevance to the query. Consider factors such as the quality of reviews, ratings, and the match between the professor’s subject expertise and the user’s request.
+3. Rank Professors: Rank the retrieved professors based on their relevance to the query. Consider factors such as the quality of reviews, ratings, and the match between the professor’s subject expertise and the user’s request.
 
-4. **Provide Top Recommendations:** Present the top 3 professors to the user. For each professor, include the following details:
+4. Provide Top Recommendations: Present the top 3 professors to the user. For each professor, include the following details:
    - **Name:** The professor's name.
    - **Subject:** The subject the professor teaches.
    - **Rating:** The average rating given by students.
@@ -54,6 +54,15 @@ async function getEmbeddingsFromGemini(text) {
 }
 
 export async function POST(req) {
+
+    // Debug logging - ADD THIS
+    console.log('=== API KEY DEBUG ===');
+    console.log('Key exists:', !!process.env.OPENROUTER_API_KEY);
+    console.log('Key length:', process.env.OPENROUTER_API_KEY?.length);
+    console.log('Key first 15 chars:', process.env.OPENROUTER_API_KEY?.substring(0, 15));
+    console.log('Key last 5 chars:', process.env.OPENROUTER_API_KEY?.slice(-5));
+    console.log('====================');
+    
     try {
         const data = await req.json();
         console.log('Received data:', data);
@@ -102,7 +111,7 @@ export async function POST(req) {
         })
 
         const completion = await openai.chat.completions.create({
-            model: 'meta-llama/llama-3.1-8b-instruct:free',
+            model: 'meta-llama/llama-3.3-70b-instruct:free',
             messages: [
                 { role: 'system', content: systemPrompt },
                 ...lastDataWithoutLastMessage,
