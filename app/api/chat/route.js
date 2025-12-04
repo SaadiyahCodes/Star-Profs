@@ -39,6 +39,26 @@ Here is an example format for your response:
   - **Review Summary:** "Dr. Johnson provides in-depth knowledge and is highly approachable for students needing extra help."
 
 Always ensure that the recommendations are tailored to the user's query and provide the most relevant and helpful information possible.
+
+FORMAT RULES (MANDATORY):
+- Each professor must appear in a SEPARATE BLOCK.
+- Leave ONE BLANK LINE between each professor block.
+- Do NOT combine professors into the same paragraph.
+
+Follow-up question behavior:
+- If the user references ONE specific professor by name or seeks clarification about only one professor:
+  - Do NOT repeat all 3 recommendations
+  - ONLY answer about that single professor
+  - Provide additional details or clarification as requested
+
+Examples of follow-ups:
+- "Tell me more about Dr. Jane Doe"
+- "Is Dr. Smith good for exams?"
+- "What is Dr. Johnson’s grading style?"
+
+In follow-ups:
+- Respond ONLY about the mentioned professor
+- Do NOT restate the top 3 list
 `
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -54,14 +74,6 @@ async function getEmbeddingsFromGemini(text) {
 }
 
 export async function POST(req) {
-
-    // Debug logging - ADD THIS
-    console.log('=== API KEY DEBUG ===');
-    console.log('Key exists:', !!process.env.OPENROUTER_API_KEY2);
-    console.log('Key length:', process.env.OPENROUTER_API_KEY2?.length);
-    console.log('Key first 15 chars:', process.env.OPENROUTER_API_KEY2?.substring(0, 15));
-    console.log('Key last 5 chars:', process.env.OPENROUTER_API_KEY2?.slice(-5));
-    console.log('====================');
     
     try {
         const data = await req.json();
