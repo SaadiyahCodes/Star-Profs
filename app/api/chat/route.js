@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import OpenAI from "openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+export const maxDuration = 30;
+export const runtime = "nodejs";
 
 const systemPrompt = `
 You are an intelligent assistant for a "Rate My Professor" search system designed to help students find the most suitable professors based on their queries. Your task is to understand the user's question and provide the top 3 professors that best match their request.
