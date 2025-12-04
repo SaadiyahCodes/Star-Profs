@@ -57,10 +57,10 @@ export async function POST(req) {
 
     // Debug logging - ADD THIS
     console.log('=== API KEY DEBUG ===');
-    console.log('Key exists:', !!process.env.OPENROUTER_API_KEY);
-    console.log('Key length:', process.env.OPENROUTER_API_KEY?.length);
-    console.log('Key first 15 chars:', process.env.OPENROUTER_API_KEY?.substring(0, 15));
-    console.log('Key last 5 chars:', process.env.OPENROUTER_API_KEY?.slice(-5));
+    console.log('Key exists:', !!process.env.OPENROUTER_API_KEY2);
+    console.log('Key length:', process.env.OPENROUTER_API_KEY2?.length);
+    console.log('Key first 15 chars:', process.env.OPENROUTER_API_KEY2?.substring(0, 15));
+    console.log('Key last 5 chars:', process.env.OPENROUTER_API_KEY2?.slice(-5));
     console.log('====================');
     
     try {
@@ -107,7 +107,7 @@ export async function POST(req) {
 
         const openai = new OpenAI({
             baseURL: "https://openrouter.ai/api/v1",
-            apiKey: process.env.OPENROUTER_API_KEY,
+            apiKey: process.env.OPENROUTER_API_KEY2,
         })
 
         const completion = await openai.chat.completions.create({
